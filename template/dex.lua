@@ -1,0 +1,14 @@
+---@class dex
+---@field newInstance fun(dexPath:string, optimizedDirectory?:strng, librarySearchPath?:string, parent?:java.lang.ClassLoader):java.lang.ClassLoader @Import is not supported by default, you need to use appendLoader manually
+---@field load fun(data:string, className?:strng, parent?:java.lang.ClassLoader):java.lang.ClassLoader
+---@field loadfile fun(path:string, className?:strng, parent?:java.lang.ClassLoader):java.lang.ClassLoader @ newInstance + appendLoader
+---@field appendLoader fun(loader:java.lang.ClassLoader) @Make import support loading additional java.lang.ClassLoader
+---@field cglib fun(parent?:java.lang.ClassLoader):java.lang.ClassLoader @cglib-for-android
+---@field dexMaker fun(parent?:java.lang.ClassLoader):java.lang.ClassLoader @com.linkedin.dexmaker:dexmaker:2.28.1
+---@field getAndroidx fun(parent?:java.lang.ClassLoader):java.lang.ClassLoader @androidx
+---@field getAndlua fun(path:string, className?:strng, parent?:java.lang.ClassLoader):java.lang.ClassLoader @andlua deprecation
+---@field getAndrolua fun(path:string, className?:strng, parent?:java.lang.ClassLoader):java.lang.ClassLoader @androlua Deprecated
+---@field getYoYo fun(parent?:java.lang.ClassLoader):java.lang.ClassLoader @com.daimajia.androidanimations:library:2.4@aar
+---@field getYoYoImpl fun(parent?:java.lang.ClassLoader):java.lang.ClassLoader @androlua
+---@field getCacheName fun(data:string):string @dex generated cache file path
+dex = {}
