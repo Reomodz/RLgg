@@ -1,0 +1,26 @@
+
+
+
+
+## ui
+
+
+
+
+
+### ui.SimpleExpandableList
+
+> 由于是首个ui库的组件,设计存在一些问题,已弃用
+>
+> 请使用 ui.SimpleExpandableListView
+
+| 参数名 | 必须 | 类型  | 说明 |
+| :----- | ---- | ----- | ---- |
+| layou  | 是   | table |      |
+
+| 返回值类型                        | 说明 |
+| --------------------------------- | ---- |
+| android.widget.ExpandableListView |      |
+
+
+
