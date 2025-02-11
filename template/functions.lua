@@ -1,0 +1,12 @@
+---@class functions
+---@field closure fun(func:function, vararg:...):function @Create a closure, and execute the closure to automatically call back the parameters of the created closure
+---@field closures fun(func:function, vararg:...):function @closure An enhanced version of closure, which can be used to append additional parameters when executing closures
+---@field debounce fun(func:function, delayMillis?:number, onBounce?:function):function @Anti-shake function, delayMillis defaults to 1000
+---@field singleton fun(func:function):function @Singleton function, the result returned by execution is always the same
+---@field preload fun(func:function):function @Preload function, you need to ensure that the first execution returns the real function
+---@field synchronized fun(func:function):function @Synchronous function, in multi-threaded mode, only one call can be made at a time, and the others will be queued (blocked)
+---@field syncCall fun(func:function, vararg:...):pcall @Synchronous execution, return value reference pcall
+---@field thread fun(func:function):function:java.lang.Thread @Thread function, returns after execution java.lang.Thread
+---@field voidThread fun(func:function):function:void @thread function, no return value
+functions = {}
+---In most cases, this library passes in a function and returns a new function as a callback. The return result of executing the callback is usually the execution result of the function parameter when creating the callback. The callback plays the role of a proxy execution.
